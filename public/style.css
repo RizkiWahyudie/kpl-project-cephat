@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.home-title {
+    font-family: 'Bebas Neue', cursive;
+    color: rgba(174, 230, 230, 1);
+}
+.nueue {
+    font-family: 'Bebas Neue', cursive;
+}
+.text-login {
+    font-family: 'Nunito', sans-serif;
+}
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+.form-calorie input[type=radio],
+.form-calorieA input[type=radio] {
+    display:none; 
+}
+.form-calorie input[type=radio] + label {
+    display:inline-block;
+	width: 150px;
+	padding:10px;
+	margin: 0 8px 25px 8px;
+	cursor:pointer;
+    border: 2px solid rgb(209 213 219);
+    background-color : #fff;
+    border-radius: 12px;
+}
+.form-calorieA input[type=radio] + label {
+    display:inline-block;
+	width: 200px;
+	padding:10px;
+	margin: 0 8px 25px 8px;
+	cursor:pointer;
+    border: 2px solid rgb(209 213 219);
+    background-color : #fff;
+    border-radius: 12px;
+}
+.form-calorie input[type=radio] + label:hover,
+.form-calorieA input[type=radio] + label:hover {
+    /* border:1px solid #000000; */
+}
+.form-calorie input[type=radio]:checked + label,
+.form-calorieA input[type=radio]:checked + label { 
+    background-image: none;
+    background-color: rgb(251 146 60);
+    border: 2px solid rgb(251 146 60);
+	color:#fff;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-calorie input[type=radio] + label .img-select,
+.form-calorieA input[type=radio] + label .img-select { 
+    display: none
+}
+.form-calorie input[type=radio]:checked + label .img-select,
+.form-calorieA input[type=radio]:checked + label .img-select
+{ 
+    display: block
+}
+
+.calory-bb {
+    left: 43%;
+    top: 66%;
+}
+
+.calory-bbb {
+    left: 40%;
+    top: 63%;
+}
+
+.calory-age {
+    left: 42.5%;
+    top: 80%;
+}
+
+.calory-agee {
+    left: 36%;
+    top: 70%;
+}
+
+.modal-result {
+    background-image: url("../src/assets/party3.png");
+    background-color: #fff
+}
+
+.pagination {
+    list-style-type: none;
+}
+
+.pagination-item {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .calory-bb {
+        left: 45.5%;
+        top: 65%;
+    }
+    .calory-bbb {
+        left: 45.5%;
+        top: 68%;
+    }
+    .calory-age {
+        left: 43%;
+        top: 65%;
+    }
+    .calory-agee {
+        left: 45%;
+        top: 80%;
+    }
+}
