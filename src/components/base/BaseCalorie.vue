@@ -5,7 +5,7 @@
             <div class="relative mx-auto w-3/4 h-auto">
                 <!-- Modal content -->
                 <div class="p-4 bg-white relative text-center rounded-2xl shadow h-5/6">
-                    <img src="src/kcal-logo1.jpg" class="w-20 mx-auto" alt="">
+                    <img src="@/assets/kcal-logo1.jpg" class="w-20 mx-auto" alt="">
                     <p class="text-green-400 text-sm nunito">Kebutuhan kalorimu sebanyak:</p>
                     <h1 class="text-3xl font-semibold mt-2.5 nunito">{{ hasilcalorie }}</h1>
                     <p class="text-xs mb-3">(Kal/hari)</p>
