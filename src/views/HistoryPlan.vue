@@ -22,7 +22,7 @@
                                 <font-awesome-icon icon="fa-solid fa-bell" class="mr-1" />
                                 <span class="bg-orange-100 py-0.5 px-2 rounded text-xs font-semibold text-orange-800">{{ history.qty }}</span>
                             </div> -->
-                            <div class="absolute right-7 -bottom-7 md:top-4 transition-all ease-in-out" :class="history.state ? 'rotate-180' : ''"><font-awesome-icon icon="fa-solid fa-angle-up" /></div>
+                            <div class="absolute right-7 -bottom-7 md:bottom-4 transition-all ease-in-out" :class="history.state ? 'rotate-180' : ''"><font-awesome-icon icon="fa-solid fa-angle-up" /></div>
                             <div class="absolute left-1 top-1">
                                 <div class="relative">
                                     <font-awesome-icon icon="fa-solid fa-certificate" class="text-orange-500 text-3xl" />

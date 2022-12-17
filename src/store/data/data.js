@@ -98,6 +98,24 @@ export default {
                 const error = new Error(responseFoods.message);
                 throw error;
             }
+            // GET
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer '+token,
+                    "Content-Type": "application/json",
+                },
+            });
+            const responsePlans = await dataPlans.json();
+            if(!dataPlans.ok) {
+                // error ...
+                const error = new Error(responsePlans.message);
+                throw error;
+            }
+            console.log(responsePlans.data.plans)
+            console.log(responsePlans.data.metadata)
+            context.commit('setPlansFood', responsePlans.data.plans);
+            context.commit('setPlansCount', responsePlans.data.metadata);
         },
         async updatePlans(context, payload) {
             console.log(payload.plans_id)
@@ -120,6 +138,24 @@ export default {
                 const error = new Error(responseFoods.message);
                 throw error;
             }
+            // GET
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer '+token,
+                    "Content-Type": "application/json",
+                },
+            });
+            const responsePlans = await dataPlans.json();
+            if(!dataPlans.ok) {
+                // error ...
+                const error = new Error(responsePlans.message);
+                throw error;
+            }
+            console.log(responsePlans.data.plans)
+            console.log(responsePlans.data.metadata)
+            context.commit('setPlansFood', responsePlans.data.plans);
+            context.commit('setPlansCount', responsePlans.data.metadata);
         },
         async updateProfile(context, payload) {
             const token = localStorage.getItem('token');

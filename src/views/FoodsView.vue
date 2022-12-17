@@ -27,16 +27,11 @@
                     class="shadow md:w-100xl rounded-3xl px-6 pt-8 pb-8 relative mb-4"
                 ></list-foods>
             </div>
-            <!-- <paginate-foods
-                :total-pages="totalPages" :total="total" :per-page="perPage" :current-page="currentPage"
-                :has-more-pages="hasMorePages" @pagechanged="showMore"
-            ></paginate-foods> -->
         </div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
 import ListFoods from '../components/foods/ListFoods.vue';
 import PaginateFoods from '../components/pagination/PaginateFoods.vue';
 

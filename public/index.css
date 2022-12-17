@@ -39,7 +39,7 @@
 }
 
 .heroDesc {
-    @apply flex bg-orange-100 text-orange-600 font-semibold items-center w-8xl rounded-full pl-3 py-1
+    @apply flex bg-orange-100 text-orange-600 font-semibold items-center w-8xl rounded-full pl-5 mb-2 py-1
 }
 
 .heroDesc span {

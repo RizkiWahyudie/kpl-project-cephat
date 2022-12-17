@@ -136,6 +136,8 @@
 </template>
 
 <script>
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 import TittleFoods from '../components/foods/TittleFoods.vue'
 export default {
     components: {
@@ -180,6 +182,9 @@ export default {
         },
         deletePlans(val) {
             this.$store.dispatch('deletePlans', val);
+            toast.success("Yeay, Berhasil hapus menu!", {
+                autoClose: 2000
+            })
             this.getDataPlans;
             this.getMetadataPlans;
         },
@@ -191,6 +196,9 @@ export default {
             this.$store.dispatch('addHistory', plan);
             this.getDataPlans;
             this.getMetadataPlans;
+            toast.success("Berhasil tambah ke history!", {
+            autoClose: 2000
+            })
         },
         minusQty(qty, id) {
             const plan = {

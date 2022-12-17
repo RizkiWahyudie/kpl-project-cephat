@@ -33,6 +33,9 @@
 </template>
 
 <script>
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
 export default {
     props: ['img', 'title', 'kalori', 'kode', 'karbo', 'lemak', 'protein', 'berat'],
     data() {
@@ -52,7 +55,13 @@ export default {
                     }
                     console.log(true)
                     this.$store.dispatch('updatePlans', plan);
+                    toast.success("Yeay, Berhasil menambah menu!", {
+                    autoClose: 2000
+                    })
+                    setTimeout(() => {
+                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
                     this.$router.push('plans')
+                    }, 2500)
                 } else {
                     const plan = {
                     makanan_id: this.kode,
@@ -60,7 +69,13 @@ export default {
                     }
                     console.log(plan)
                     this.$store.dispatch('postPlans', plan);
+                    toast.success("Yeay, Berhasil menambah menu!", {
+                    autoClose: 2000
+                    })
+                    setTimeout(() => {
+                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
                     this.$router.push('plans')
+                    }, 2500)
                 }
             } else {
                 const plan = {
@@ -69,7 +84,13 @@ export default {
                     }
                     console.log(plan)
                     this.$store.dispatch('postPlans', plan);
+                    toast.success("Yeay, Berhasil menambah menu!", {
+                    autoClose: 2000
+                    })
+                    setTimeout(() => {
+                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
                     this.$router.push('plans')
+                    }, 2500)
             }
         },
     },

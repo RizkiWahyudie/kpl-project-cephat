@@ -123,7 +123,7 @@
                                     Profile 3 dari 6
                                 </template>
                                 <template #question>
-                                    Beart Badanmu
+                                    Berat Badanmu
                                 </template>
                             </base-title>
                             <div class="relative">
@@ -457,10 +457,6 @@ export default {
                 toast.success("Yeay! Kamu berhasil Update👋🏻", {
                     autoClose: 2000,
                 });
-                setTimeout(() => {
-                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
-                    this.$router.replace('/foods');
-                }, 3500)
                 this.getUser();
             } catch (error) {
                 toast.error("Yahh, Belum berhasil update😖", {
