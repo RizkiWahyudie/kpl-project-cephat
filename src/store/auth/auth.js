@@ -36,7 +36,7 @@ export default {
     actions: {
         async getUser(context) {
             const token = localStorage.getItem('token');
-            const dataUser = await fetch('http://localhost:3000/users', {
+            const dataUser = await fetch('https://cephat-backend-production.up.railway.app/users', {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -52,7 +52,7 @@ export default {
         async login(context, payload) {
             // API KEY didapat di menu setting firebase
             // link URL didapat dari referensi firebase
-            const response = await fetch('http://localhost:3000/users/auth', {
+            const response = await fetch('https://cephat-backend-production.up.railway.app/users/auth', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export default {
                 const error = new Error(responseData.message || 'Incorrect your email/password!')
                 throw error;
             }
-            const dataUser = await fetch('http://localhost:3000/users', {
+            const dataUser = await fetch('https://cephat-backend-production.up.railway.app/users', {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+responseData.data.access_token,
@@ -130,7 +130,7 @@ export default {
         async signup(context, payload) {
             // API KEY didapat di menu setting firebase
             // link URL didapat dari referensi firebase
-            const response = await fetch('http://localhost:3000/users', {
+            const response = await fetch('https://cephat-backend-production.up.railway.app/users', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

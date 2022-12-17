@@ -307,7 +307,7 @@ export default {
     methods: {
         async getUser() {
             const token = localStorage.getItem('token');
-            const dataUser = await fetch('http://localhost:3000/users', {
+            const dataUser = await fetch('https://cephat-backend-production.up.railway.app/users', {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,

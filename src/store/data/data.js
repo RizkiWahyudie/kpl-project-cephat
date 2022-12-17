@@ -24,7 +24,7 @@ export default {
     actions: {
         async getFoods(context) {
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/makanan?page`, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/makanan?page`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -42,7 +42,7 @@ export default {
         },
         async getHistories(context) {
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/histories`, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/histories`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -60,7 +60,7 @@ export default {
         },
         async getPlans(context) {
             const token = localStorage.getItem('token');
-            const dataPlans = await fetch(`http://localhost:3000/plans`, {
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -80,7 +80,7 @@ export default {
         },
         async postPlans(context, payload) {
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/plans`, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
                 method: 'POST',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -103,7 +103,7 @@ export default {
             console.log(payload.plans_id)
             console.log(payload.qty)
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/plans/` + payload.plans_id, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -123,7 +123,7 @@ export default {
         },
         async updateProfile(context, payload) {
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/users`, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/users`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -164,7 +164,7 @@ export default {
             console.log(payload.plans_id)
             console.log(payload.is_done)
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/plans/` + payload.plans_id, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -183,7 +183,7 @@ export default {
             }
 
             // get Plans
-            const dataPlans = await fetch(`http://localhost:3000/plans`, {
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -203,7 +203,7 @@ export default {
             console.log(payload.plans_id)
             console.log(payload.qty)
             const token = localStorage.getItem('token');
-            const dataFoods = await fetch(`http://localhost:3000/plans/` + payload.plans_id, {
+            const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -222,7 +222,7 @@ export default {
             }
 
             // get Plans
-            const dataPlans = await fetch(`http://localhost:3000/plans`, {
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -240,7 +240,7 @@ export default {
         },
         async deletePlans(context, payload) {
             const token = localStorage.getItem('token');
-            const deletePlans = await fetch(`http://localhost:3000/plans/` + payload, {
+            const deletePlans = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': 'Bearer '+token,
@@ -254,7 +254,7 @@ export default {
                 throw error;
             }
             // get Plans
-            const dataPlans = await fetch(`http://localhost:3000/plans`, {
+            const dataPlans = await fetch(`https://cephat-backend-production.up.railway.app/plans`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer '+token,
