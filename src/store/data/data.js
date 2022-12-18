@@ -37,7 +37,7 @@ export default {
                 const error = new Error(responseFoods.message);
                 throw error;
             }
-            console.log(responseFoods.data.makanan)
+            // console.log(responseFoods.data.makanan)
             context.commit('setFoods', responseFoods.data.makanan);
         },
         async getHistories(context) {
@@ -55,7 +55,7 @@ export default {
                 const error = new Error(responseFoods.message);
                 throw error;
             }
-            console.log(responseFoods.data.histories)
+            // console.log(responseFoods.data.histories)
             context.commit('setHistories', responseFoods.data.histories);
         },
         async getPlans(context) {
@@ -73,8 +73,8 @@ export default {
                 const error = new Error(responsePlans.message);
                 throw error;
             }
-            console.log(responsePlans.data.plans)
-            console.log(responsePlans.data.metadata)
+            // console.log(responsePlans.data.plans)
+            // console.log(responsePlans.data.metadata)
             context.commit('setPlansFood', responsePlans.data.plans);
             context.commit('setPlansCount', responsePlans.data.metadata);
         },
@@ -91,7 +91,7 @@ export default {
                     qty: payload.qty
                 })
             });
-            console.log(payload.makanan_id)
+            // console.log(payload.makanan_id)
             const responseFoods = await dataFoods.json();
             if(!dataFoods.ok) {
                 // error ...
@@ -112,14 +112,14 @@ export default {
                 const error = new Error(responsePlans.message);
                 throw error;
             }
-            console.log(responsePlans.data.plans)
-            console.log(responsePlans.data.metadata)
+            // console.log(responsePlans.data.plans)
+            // console.log(responsePlans.data.metadata)
             context.commit('setPlansFood', responsePlans.data.plans);
             context.commit('setPlansCount', responsePlans.data.metadata);
         },
         async updatePlans(context, payload) {
-            console.log(payload.plans_id)
-            console.log(payload.qty)
+            // console.log(payload.plans_id)
+            // console.log(payload.qty)
             const token = localStorage.getItem('token');
             const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
@@ -131,7 +131,7 @@ export default {
                     qty: payload.qty
                 })
             });
-            console.log(payload)
+            // console.log(payload)
             const responseFoods = await dataFoods.json();
             if(!dataFoods.ok) {
                 // error ...
@@ -152,8 +152,8 @@ export default {
                 const error = new Error(responsePlans.message);
                 throw error;
             }
-            console.log(responsePlans.data.plans)
-            console.log(responsePlans.data.metadata)
+            // console.log(responsePlans.data.plans)
+            // console.log(responsePlans.data.metadata)
             context.commit('setPlansFood', responsePlans.data.plans);
             context.commit('setPlansCount', responsePlans.data.metadata);
         },
@@ -188,7 +188,7 @@ export default {
                     }
                 })
             });
-            console.log(payload)
+            // console.log(payload)
             const responseFoods = await dataFoods.json();
             if(!dataFoods.ok) {
                 // error ...
@@ -197,8 +197,8 @@ export default {
             }
         },
         async addHistory(context, payload) {
-            console.log(payload.plans_id)
-            console.log(payload.is_done)
+            // console.log(payload.plans_id)
+            // console.log(payload.is_done)
             const token = localStorage.getItem('token');
             const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
@@ -210,7 +210,7 @@ export default {
                     is_done: payload.is_done
                 })
             });
-            console.log(payload)
+            // console.log(payload)
             const responseFoods = await dataFoods.json();
             if(!dataFoods.ok) {
                 // error ...
@@ -236,8 +236,8 @@ export default {
             context.commit('setPlansCount', responsePlans.data.metadata);
         },
         async minmaxPlans(context, payload) {
-            console.log(payload.plans_id)
-            console.log(payload.qty)
+            // console.log(payload.plans_id)
+            // console.log(payload.qty)
             const token = localStorage.getItem('token');
             const dataFoods = await fetch(`https://cephat-backend-production.up.railway.app/plans/` + payload.plans_id, {
                 method: 'PUT',
@@ -249,7 +249,7 @@ export default {
                     qty: payload.qty
                 })
             });
-            console.log(payload)
+            // console.log(payload)
             const responseFoods = await dataFoods.json();
             if(!dataFoods.ok) {
                 // error ...

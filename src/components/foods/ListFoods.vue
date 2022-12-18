@@ -53,7 +53,7 @@ export default {
                     plans_id: data.id,
                     qty: data.qty + 1
                     }
-                    console.log(true)
+                    // console.log(true)
                     this.$store.dispatch('updatePlans', plan);
                     toast.success("Yeay, Berhasil menambah menu!", {
                     autoClose: 2000
@@ -67,7 +67,7 @@ export default {
                     makanan_id: this.kode,
                     qty: 1
                     }
-                    console.log(plan)
+                    // console.log(plan)
                     this.$store.dispatch('postPlans', plan);
                     toast.success("Yeay, Berhasil menambah menu!", {
                     autoClose: 2000
@@ -82,7 +82,7 @@ export default {
                     makanan_id: this.kode,
                     qty: 1
                     }
-                    console.log(plan)
+                    // console.log(plan)
                     this.$store.dispatch('postPlans', plan);
                     toast.success("Yeay, Berhasil menambah menu!", {
                     autoClose: 2000

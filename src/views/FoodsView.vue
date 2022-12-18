@@ -73,7 +73,7 @@ export default {
         showMore(page) {
             this.page = page;
             this.currentPage = page;
-            console.log(this.page)
+            // console.log(this.page)
         }
     },
     computed: {

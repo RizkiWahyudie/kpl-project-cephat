@@ -595,13 +595,13 @@ export default {
             }
             // Women:
             // BMR = (10 × weight [kg]) + (6.25 × height [cm]) – (5 × age [years]) – 161
-            console.log(this.resultKcal)
-            console.log(this.calcProteinMin)
-            console.log(this.calcProteinMax)
-            console.log(this.calcKarboMin)
-            console.log(this.calcKarboMax)
-            console.log(this.calcLemakMin)
-            console.log(this.calcLemakMax)
+            // console.log(this.resultKcal)
+            // console.log(this.calcProteinMin)
+            // console.log(this.calcProteinMax)
+            // console.log(this.calcKarboMin)
+            // console.log(this.calcKarboMax)
+            // console.log(this.calcLemakMin)
+            // console.log(this.calcLemakMax)
         }
     },
     computed: {

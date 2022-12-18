@@ -315,7 +315,7 @@ export default {
                 },
             });
             const users = await dataUser.json();
-            console.log(users.data.user)
+            // console.log(users.data.user)
             const convertKarbohidrat = JSON.parse(users.data.user.nutrition_profiles.karbohidrat);
             const convertLemak = JSON.parse(users.data.user.nutrition_profiles.lemak);
             const convertProtein = JSON.parse(users.data.user.nutrition_profiles.protein);
@@ -333,7 +333,7 @@ export default {
             this.dataUser.level_aktivitas = users.data.user.profiles.level_aktivitas,
             this.dataUser.tinggi_badan.val = users.data.user.profiles.tinggi_badan,
             this.dataUser.umur.val = users.data.user.profiles.umur
-            console.log(this.dataUser)
+            // console.log(this.dataUser)
         },
         clearValidity(input) {
             if(this.dataUser[input].val === '') {
@@ -451,7 +451,7 @@ export default {
                     max: this.calcLemakMax
                 }
             }
-            console.log(updateProfile)
+            // console.log(updateProfile)
             try {
                 await this.$store.dispatch('updateProfile', updateProfile);
                 toast.success("Yeay! Kamu berhasil Update👋🏻", {

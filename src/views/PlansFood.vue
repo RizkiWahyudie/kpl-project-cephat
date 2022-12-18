@@ -164,7 +164,7 @@ export default {
                 },
             });
             const users = await dataUser.json();
-            console.log(users.data.user)
+            // console.log(users.data.user)
             const convertKarbohidrat = JSON.parse(users.data.user.nutrition_profiles.karbohidrat);
             const convertLemak = JSON.parse(users.data.user.nutrition_profiles.lemak);
             const convertProtein = JSON.parse(users.data.user.nutrition_profiles.protein);
@@ -222,7 +222,7 @@ export default {
         },
         getMetadataPlans() {
             const plans = this.$store.getters.plansCount
-            console.log(plans)
+            // console.log(plans)
             return this.plansCount = plans
         },
         validNutrition() {

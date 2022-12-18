@@ -137,7 +137,7 @@ export default {
                     // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
                     this.$router.replace('/');
                 }, 3500)
-                console.log(this.dataUser)
+                // console.log(this.dataUser)
             } catch (error) {
                 toast.error("Yahh, kamu blm punya akun😖", {
                     autoClose: 5000,

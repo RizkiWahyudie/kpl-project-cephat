@@ -63,7 +63,7 @@ export default {
                 })
             });
             const responseData = await response.json();
-            console.log(responseData)
+            // console.log(responseData)
             if(!response.ok) {
                 // error ...
                 const error = new Error(responseData.message || 'Incorrect your email/password!')
@@ -153,7 +153,7 @@ export default {
                 })
             });
             const responseData = await response.json();
-            console.log(responseData)
+            // console.log(responseData)
             if(!response.ok) {
                 // error ...
                 const error = new Error(responseData.message || 'Email has already exist, Try another email!')

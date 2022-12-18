@@ -68,7 +68,7 @@ export default {
             })
             .catch((error) => {
                 // handle error
-                console.log('Gagal : ' + error);
+                // console.log('Gagal : ' + error);
             })
         },
         postData() {
