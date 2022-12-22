@@ -55,8 +55,29 @@ export default {
                 const error = new Error(responseFoods.message);
                 throw error;
             }
+            const foodys = [];
+            for (const key in responseFoods.data.histories) {
+                const tgl = new Date(responseFoods.data.histories[key].tgl_konsumsi);
+                const foodh = {
+                    id: responseFoods.data.histories[key].id,
+                    makanan : {
+                        id: responseFoods.data.histories[key].makanan.id,
+                        nama: responseFoods.data.histories[key].makanan.nama,
+                        image: responseFoods.data.histories[key].makanan.image
+                    },
+                    tgl_konsumsi: tgl.toLocaleDateString("id"),
+                    plan_id: responseFoods.data.histories[key].plan_id,
+                    qty: responseFoods.data.histories[key].qty,
+                    total_berat: responseFoods.data.histories[key].total_berat,
+                    total_kalori: responseFoods.data.histories[key].total_kalori,
+                    total_karbohidrat:  responseFoods.data.histories[key].total_karbohidrat,
+                    total_lemak: responseFoods.data.histories[key].total_lemak,
+                    total_protein: responseFoods.data.histories[key].total_protein
+                }
+                foodys.unshift(foodh);
+            }
             // console.log(responseFoods.data.histories)
-            context.commit('setHistories', responseFoods.data.histories);
+            context.commit('setHistories', foodys);
         },
         async getPlans(context) {
             const token = localStorage.getItem('token');

@@ -112,6 +112,7 @@ export default {
     computed: {
         getHistories() {
             const history = this.$store.getters.getHistories
+            console.log(history)
             return this.histories = history
         },
     },

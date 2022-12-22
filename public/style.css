@@ -17,7 +17,8 @@
     display:none; 
 }
 .form-calorie input[type=radio] + label {
-    display:inline-block;
+    display: flex;
+    flex-direction: column;
 	width: 150px;
 	padding:10px;
 	margin: 0 8px 25px 8px;
@@ -27,7 +28,8 @@
     border-radius: 12px;
 }
 .form-calorieA input[type=radio] + label {
-    display:inline-block;
+    display: flex;
+    flex-direction: column;
 	width: 200px;
 	padding:10px;
 	margin: 0 8px 25px 8px;
@@ -64,8 +66,8 @@
 }
 
 .calory-bb {
-    left: 43%;
-    top: 66%;
+    left: 41%;
+    top: 64%;
 }
 
 .calory-bbb {
@@ -74,8 +76,8 @@
 }
 
 .calory-age {
-    left: 42.5%;
-    top: 80%;
+    left: 40%;
+    top: 75%;
 }
 
 .calory-agee {
@@ -92,9 +94,9 @@
     list-style-type: none;
 }
 
-.pagination-item {
+/* .pagination-item {
     display: inline-block;
-}
+} */
 
 @media (min-width: 768px) {
     .calory-bb {
@@ -106,8 +108,8 @@
         top: 68%;
     }
     .calory-age {
-        left: 43%;
-        top: 65%;
+        left: 45%;
+        top: 70%;
     }
     .calory-agee {
         left: 45%;

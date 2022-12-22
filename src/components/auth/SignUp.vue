@@ -223,7 +223,7 @@
                                                     src="https://iili.io/HnrcVYF.md.webp"
                                                     alt="I'm sad" />
                                                 <p class="calorie-subtitle nunito">Si Paling Netflix & Chill</p>
-                                                <p class="text-xs text-center">Olahraga seminggu sekali bahkan tidak sama sekali</p>
+                                                <p class="text-xs text-center">Aktivitas sangat ringan atau olahraga 0-1 kali/minggu</p>
                                             </label>
                                         </li>
                                         <li class="relative">
@@ -234,7 +234,7 @@
                                                     src="https://iili.io/Hnrcwhv.md.webp"
                                                     alt="I'm sad" />
                                                 <p class="calorie-subtitle nunito">Si Paling Kerja kantoran</p>
-                                                <p class="text-xs text-center">Olahraga seminggu dua kali minimal sekali</p>
+                                                <p class="text-xs text-center">Aktivitas ringan atau olahraga 1-2 kali/minggu</p>
                                             </label>
                                         </li>
                                         <li class="relative">
@@ -246,7 +246,7 @@
                                                     src="https://iili.io/HnrcjTJ.md.webp"
                                                     alt="I'm sad" />
                                                 <p class="calorie-subtitle nunito">Si Paling Supervisor</p>
-                                                <p class="text-xs text-center">Olahraga yang sering 3-4x karena kerja nya pun mengandung olahraga</p>
+                                                <p class="text-xs text-center">Aktivitas sedang atau olahraga 3-4 kali/minggu</p>
                                             </label>
                                         </li>
                                         <li class="relative">
@@ -258,7 +258,7 @@
                                                     src="https://iili.io/HnrcXpa.md.webp"
                                                     alt="I'm sad" />
                                                 <p class="calorie-subtitle nunito">Si Paling Driver Ojol</p>
-                                                <p class="text-xs text-center">Olahraga yang sering karena ngojol termasuk kegiatan cape</p>
+                                                <p class="text-xs text-center">Aktivitas outdoor atau olahraga 4-5 kali/minggu</p>
                                             </label>
                                         </li>
                                         <li class="relative">
@@ -270,7 +270,7 @@
                                                     src="https://iili.io/HnrceBp.md.webp"
                                                     alt="I'm sad" />
                                                 <p class="calorie-subtitle nunito">Si Paling Teknisi</p>
-                                                <p class="text-xs text-center">Olahraga sangat sering karena pekerjaan yang berat</p>
+                                                <p class="text-xs text-center">Aktivitas Berat atau Olahraga setiap hari</p>
                                             </label>
                                         </li>
                                     </ul>
@@ -278,8 +278,7 @@
                             </div>
                             <!-- Modal footer -->
                             <div class="flex items-center p-3 bg-gray-100 space-x-2 rounded-b-2xl border-t border-gray-200">
-                                <button type="button" @click="stateResult()" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center">I accept</button>
-                                <button type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-orange-300 rounded-lg border border-gray-200 text-sm font-medium px-3 py-1.5 hover:text-gray-900 focus:z-10">Decline</button>
+                                <button type="button" @click="stateResult()" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center">Accept</button>
                             </div>
                         </div>
                     </div>
@@ -331,7 +330,6 @@ import BaseTitle from '../base/BaseTitle.vue'
 import BaseCalorie from '../base/BaseCalorie.vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
-import Tr23Vue from '../../../../../../../../../AppData/Roaming/Code/User/History/-6ee4fe21/Tr23.vue';
 
 export default {
     components: {
@@ -495,8 +493,10 @@ export default {
                     this.$router.replace('/login');
                 }, 3500)
             } catch (error) {
-                toast.error("Yahh, kamu blm punya akun😖", {
-                    autoClose: 5000,
+                this.stateBtnClose = false;
+                this.stateFormCalorie = true;
+                toast.error('Email sudah ada, ganti ya!', {
+                    autoClose: 4000,
                 });
             }
             this.isLoading = false

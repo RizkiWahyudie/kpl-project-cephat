@@ -1,5 +1,7 @@
 // kita menyimpan expired time login bukan di vuex tapi di local storage
 import router from '@/router/index.js'
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 let timer;
 export default {
     state() {
@@ -8,7 +10,7 @@ export default {
             userId: null,
             tokenExpired: null,
             setLogout: false,
-            dataUser: {}
+            dataUser: {},
         }
     },
     mutations: {
@@ -31,7 +33,7 @@ export default {
             setTimeout(() => {
                 state.setLogout = false
             }, 200);
-        }
+        },
     },
     actions: {
         async getUser(context) {
@@ -192,6 +194,6 @@ export default {
         },
         setLogout(state) {
             return state.setLogout;
-        }
+        },
     },
 }

@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <!-- DETAIL PEMBAYARAN -->
+            <!-- DETAIL NUTRISI -->
             <div v-if="getMetadataPlans" class=" p-5 rounded-lg shadow">
                 <h2 class="font-semibold text-lg mb-3">Detail Total Nutrisi</h2>
                 <div class="flex justify-between items-center mb-1">
@@ -222,8 +222,19 @@ export default {
         },
         getMetadataPlans() {
             const plans = this.$store.getters.plansCount
-            // console.log(plans)
-            return this.plansCount = plans
+            const numKarbo = Number(plans.count_karbohidrat).toFixed(1);
+            const numKalori = Number(plans.count_kalori).toFixed(1);
+            const numLemak = Number(plans.count_lemak).toFixed(1);
+            const numProtein = Number(plans.count_protein).toFixed(1);
+            const dataPlan = {
+                count_berat: plans.count_berat,
+                count_makanan: plans.count_makanan,
+                count_kalori: numKalori,
+                count_karbohidrat: numKarbo,
+                count_lemak: numLemak,
+                count_protein: numProtein
+            }
+            return this.plansCount = dataPlan
         },
         validNutrition() {
             if(this.getMetadataPlans.count_kalori > this.dataUser.kalori) {

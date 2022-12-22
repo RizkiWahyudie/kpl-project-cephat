@@ -192,7 +192,7 @@
                                             src="https://iili.io/HnrcVYF.md.webp"
                                             alt="I'm sad" />
                                         <p class="calorie-subtitle nunito">Si Paling Netflix & Chill</p>
-                                        <p class="text-xs text-center">Olahraga seminggu sekali bahkan tidak sama sekali</p>
+                                        <p class="text-xs text-center">Aktivitas sangat ringan atau olahraga 0-1 kali/minggu</p>
                                     </label>
                                 </li>
                                 <li class="relative">
@@ -203,7 +203,7 @@
                                             src="https://iili.io/Hnrcwhv.md.webp"
                                             alt="I'm sad" />
                                         <p class="calorie-subtitle nunito">Si Paling Kerja kantoran</p>
-                                        <p class="text-xs text-center">Olahraga seminggu dua kali minimal sekali</p>
+                                        <p class="text-xs text-center">Aktivitas ringan atau olahraga 1-2 kali/minggu</p>
                                     </label>
                                 </li>
                                 <li class="relative">
@@ -215,7 +215,7 @@
                                             src="https://iili.io/HnrcjTJ.md.webp"
                                             alt="I'm sad" />
                                         <p class="calorie-subtitle nunito">Si Paling Supervisor</p>
-                                        <p class="text-xs text-center">Olahraga yang sering 3-4x karena kerja nya pun mengandung olahraga</p>
+                                        <p class="text-xs text-center">Aktivitas sedang atau olahraga 3-4 kali/minggu</p>
                                     </label>
                                 </li>
                                 <li class="relative">
@@ -227,7 +227,7 @@
                                             src="https://iili.io/HnrcXpa.md.webp"
                                             alt="I'm sad" />
                                         <p class="calorie-subtitle nunito">Si Paling Driver Ojol</p>
-                                        <p class="text-xs text-center">Olahraga yang sering karena ngojol termasuk kegiatan cape</p>
+                                        <p class="text-xs text-center">Aktivitas outdoor atau olahraga 4-5 kali/minggu</p>
                                     </label>
                                 </li>
                                 <li class="relative">
@@ -239,7 +239,7 @@
                                             src="https://iili.io/HnrceBp.md.webp"
                                             alt="I'm sad" />
                                         <p class="calorie-subtitle nunito">Si Paling Teknisi</p>
-                                        <p class="text-xs text-center">Olahraga sangat sering karena pekerjaan yang berat</p>
+                                        <p class="text-xs text-center">Aktivitas Berat atau Olahraga setiap hari</p>
                                     </label>
                                 </li>
                             </ul>

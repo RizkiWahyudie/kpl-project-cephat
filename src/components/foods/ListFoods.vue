@@ -55,13 +55,13 @@ export default {
                     }
                     // console.log(true)
                     this.$store.dispatch('updatePlans', plan);
-                    toast.success("Yeay, Berhasil menambah menu!", {
+                    toast.success("Berhasil, Tambah lagi yuk!", {
                     autoClose: 2000
                     })
-                    setTimeout(() => {
-                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
-                    this.$router.push('plans')
-                    }, 2500)
+                    // setTimeout(() => {
+                    // // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
+                    // this.$router.push('plans')
+                    // }, 2500)
                 } else {
                     const plan = {
                     makanan_id: this.kode,
@@ -69,13 +69,13 @@ export default {
                     }
                     // console.log(plan)
                     this.$store.dispatch('postPlans', plan);
-                    toast.success("Yeay, Berhasil menambah menu!", {
+                    toast.success("Berhasil, Tambah lagi yuk!", {
                     autoClose: 2000
                     })
-                    setTimeout(() => {
-                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
-                    this.$router.push('plans')
-                    }, 2500)
+                    // setTimeout(() => {
+                    // // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
+                    // this.$router.push('plans')
+                    // }, 2500)
                 }
             } else {
                 const plan = {
@@ -84,13 +84,13 @@ export default {
                     }
                     // console.log(plan)
                     this.$store.dispatch('postPlans', plan);
-                    toast.success("Yeay, Berhasil menambah menu!", {
+                    toast.success("Berhasil, Tambah lagi yuk!", {
                     autoClose: 2000
                     })
-                    setTimeout(() => {
-                    // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
-                    this.$router.push('plans')
-                    }, 2500)
+                    // setTimeout(() => {
+                    // // replace untuk menavigasikan link namun tidak bisa kembali ke form karena di replace
+                    // this.$router.push('plans')
+                    // }, 2500)
             }
         },
     },
@@ -102,7 +102,7 @@ export default {
     },
     emits: ['addPlan'],
     mounted() {
-        // this.$store.dispatch('getPlans');
+        this.$store.dispatch('getPlans');
     }
 }
 </script>
