@@ -9,7 +9,7 @@
                 btn="Tambah"
             ></tittle-foods>
             <!-- LIST MAKANAN -->
-            <div v-if="getDataPlans && !getDataPlans.length" class="text-center my-3">Kosong, silakan tambah makanan untuk kebutuhan gizimu!</div>
+            <div v-if="getDataPlans && !getDataPlans.length" class="text-center my-3"> </div>
             <div v-else class="flex py-5 border-b mb-5" v-for="plan in getDataPlans" :key="plan.id">
                 <div class="flex-auto w-1/4">
                     <img class="w-full h-24 md:h-20 object-cover rounded-lg" :src="plan.makanan.image" alt="" >
@@ -222,19 +222,7 @@ export default {
         },
         getMetadataPlans() {
             const plans = this.$store.getters.plansCount
-            const numKarbo = Number(plans.count_karbohidrat).toFixed(1);
-            const numKalori = Number(plans.count_kalori).toFixed(1);
-            const numLemak = Number(plans.count_lemak).toFixed(1);
-            const numProtein = Number(plans.count_protein).toFixed(1);
-            const dataPlan = {
-                count_berat: plans.count_berat,
-                count_makanan: plans.count_makanan,
-                count_kalori: numKalori,
-                count_karbohidrat: numKarbo,
-                count_lemak: numLemak,
-                count_protein: numProtein
-            }
-            return this.plansCount = dataPlan
+            return this.plansCount = plans
         },
         validNutrition() {
             if(this.getMetadataPlans.count_kalori > this.dataUser.kalori) {

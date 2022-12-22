@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
+            <div v-if="getHistories < 1">
                 <img src="../assets/no-results.webp" class="mx-auto w-3/4 md:w-2/6" alt="">
                 <p class="text-center my-3">Kosong, silakan tambah ke history jika sudah menyelesaikan rencana gizimu!</p>
             </div>
