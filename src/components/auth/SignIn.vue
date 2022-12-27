@@ -139,7 +139,7 @@ export default {
                 }, 3500)
                 // console.log(this.dataUser)
             } catch (error) {
-                toast.error("Yahh, kamu blm punya akun😖", {
+                toast.error("Yahh, salah email/password😖", {
                     autoClose: 5000,
                 });
             }
